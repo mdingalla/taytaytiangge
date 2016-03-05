@@ -6,7 +6,7 @@ using Nop.Web.Framework.Security;
 
 namespace Nop.Admin.Controllers
 {
-    [NopHttpsRequirement(SslRequirement.Yes)]
+    //[NopHttpsRequirement(SslRequirement.Yes)]
     [AdminValidateIpAddress]
     [AdminAuthorize]
     [AdminAntiForgery]
