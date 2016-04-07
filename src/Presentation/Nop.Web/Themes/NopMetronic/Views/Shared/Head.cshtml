@@ -1,0 +1,52 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Themes
+@using Nop.Web.Framework.UI
+@{
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+
+    //add browser specific CSS files
+    var browser = Request.Browser;
+    if (browser.Browser == "IE" && browser.MajorVersion == 8)
+    {
+        Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/ie8.css", themeName));
+    }
+
+    <!-- Fonts START -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css"><!--- fonts for slider on the index page -->
+  <!-- Fonts END -->
+
+    <!-- Page level plugin styles START -->
+
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/pages/css/animate.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/plugins/fancybox/source/jquery.fancybox.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/plugins/owl.carousel/assets/owl.carousel.css", themeName));
+
+  <!-- Page level plugin styles END -->
+
+      <!-- Theme styles START -->
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/pages/css/components.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/pages/css/slider.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/pages/css/style-shop.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/corporate/css/style.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/corporate/css/style-responsive.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/corporate/css/themes/red.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/assets/corporate/css/custom.css", themeName));
+    
+    
+    @*<link href="assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">*@
+    
+  <!-- Theme styles END -->
+
+
+    //add jQuery UI css file
+    //Html.AppendCssFileParts("~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css");
+
+    if (browser.Browser == "IE" && browser.MajorVersion == 8)
+    {
+        Html.AddScriptParts("~/Scripts/selectivizr.min.js");
+        Html.AddScriptParts("~/Scripts/respond.min.js");
+    }
+}

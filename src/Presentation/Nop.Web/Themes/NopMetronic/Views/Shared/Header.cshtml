@@ -1,0 +1,106 @@
+﻿  <!-- BEGIN STYLE CUSTOMIZER -->
+<div class="color-panel hidden-sm">
+    <div class="color-mode-icons icon-color"></div>
+    <div class="color-mode-icons icon-color-close"></div>
+    <div class="color-mode">
+        <p>THEME COLOR</p>
+        <ul class="inline">
+            <li class="color-red current color-default" data-style="red"></li>
+            <li class="color-blue" data-style="blue"></li>
+            <li class="color-green" data-style="green"></li>
+            <li class="color-orange" data-style="orange"></li>
+            <li class="color-gray" data-style="gray"></li>
+            <li class="color-turquoise" data-style="turquoise"></li>
+        </ul>
+    </div>
+</div>
+<!-- END BEGIN STYLE CUSTOMIZER --> 
+
+
+  <!-- BEGIN TOP BAR -->
+<div class="pre-header">
+    <div class="container">
+        <div class="row">
+            <!-- BEGIN TOP BAR LEFT PART -->
+            <div class="col-md-6 col-sm-6 additional-shop-info">
+                <ul class="list-unstyled list-inline">
+                    <li><i class="fa fa-phone"></i><span>+1 456 6717</span></li>
+                    <!-- BEGIN CURRENCIES -->
+                    <li class="shop-currencies">
+                        <a href="javascript:void(0);">€</a>
+                        <a href="javascript:void(0);">£</a>
+                        <a href="javascript:void(0);" class="current">$</a>
+                    </li>
+                    <!-- END CURRENCIES -->
+                    <!-- BEGIN LANGS -->
+                    <li class="langs-block">
+                        <a href="javascript:void(0);" class="current">English </a>
+                        <div class="langs-block-others-wrapper">
+                            <div class="langs-block-others">
+                                <a href="javascript:void(0);">French</a>
+                                <a href="javascript:void(0);">Germany</a>
+                                <a href="javascript:void(0);">Turkish</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- END LANGS -->
+                </ul>
+            </div>
+            <!-- END TOP BAR LEFT PART -->
+            <!-- BEGIN TOP BAR MENU -->
+            <div class="col-md-6 col-sm-6 additional-nav">
+                <ul class="list-unstyled list-inline pull-right">
+                    <li><a href="shop-account.html">My Account</a></li>
+                    <li><a href="shop-wishlist.html">My Wishlist</a></li>
+                    <li><a href="shop-checkout.html">Checkout</a></li>
+                    <li><a href="page-login.html">Log In</a></li>
+                </ul>
+            </div>
+            <!-- END TOP BAR MENU -->
+        </div>
+    </div>
+</div>
+<!-- END TOP BAR -->
+
+
+<div class="navbar navbar-default navbar-fixed-top top-menu" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".test">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse test">
+            @Html.Widget("header")
+            @Html.Action("HeaderLinks", "Common")
+            @*@Html.Action("FlyoutShoppingCart", "ShoppingCart")*@
+        </div>
+    </div>
+</div>
+@Html.Widget("bsmegamenu")
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("_Notifications")
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <a href="@Url.RouteUrl("HomePage")" class="logo">&nbsp; </a>
+        </div>
+        <div class="col-md-8">
+            <div class="search-box col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+                @Html.Action("SearchBox", "Catalog")
+            </div>
+            @*@Html.Widget("header_selectors")*@
+        </div>
+    </div>
+</div>
+<div class="down-space-30"></div>
+
+
