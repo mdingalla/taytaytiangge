@@ -37,5 +37,7 @@ namespace Nop.Web.Models.Boards
 
         public int CurrentTopicPage { get; set; }
 
+        public bool IsCustomerGuest { get; set; }
+
     }
 }
