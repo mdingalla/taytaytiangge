@@ -15,5 +15,7 @@ namespace Nop.Web.Models.Boards
         public string PostCreatedOnStr { get; set; }
         
         public bool ShowTopic { get; set; }
+
+        public bool IsCustomerGuest { get; set; }
     }
 }
