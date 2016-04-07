@@ -2872,7 +2872,6 @@
     <Content Include="Themes\NopMetronic\Content\assets\corporate\img\icons\Thumbs.db" />
     <Content Include="Themes\NopMetronic\Content\assets\corporate\img\logos\Thumbs.db" />
     <Content Include="Themes\NopMetronic\Content\assets\corporate\img\payments\Thumbs.db" />
-    <Content Include="Themes\NopMetronic\Content\assets\corporate\img\Thumbs.db" />
     <Content Include="Themes\NopMetronic\Content\assets\pages\img\brands\Thumbs.db" />
     <Content Include="Themes\NopMetronic\Content\assets\pages\img\careers\Thumbs.db" />
     <Content Include="Themes\NopMetronic\Content\assets\pages\img\clients\Thumbs.db" />
