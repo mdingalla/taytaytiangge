@@ -12,6 +12,7 @@ namespace Nop.Web.Models.Order
             Items = new List<OrderItemModel>();
             AvailableReturnReasons = new List<ReturnRequestReasonModel>();
             AvailableReturnActions= new List<ReturnRequestActionModel>();
+
         }
 
         public int OrderId { get; set; }
@@ -33,7 +34,9 @@ namespace Nop.Web.Models.Order
         public string Comments { get; set; }
 
         public string Result { get; set; }
-        
+        public string ReturnReason { get; set; }
+
+
         #region Nested classes
 
         public partial class OrderItemModel : BaseNopEntityModel
