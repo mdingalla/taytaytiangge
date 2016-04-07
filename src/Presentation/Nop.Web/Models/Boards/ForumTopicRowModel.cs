@@ -20,5 +20,7 @@ namespace Nop.Web.Models.Boards
 
         //posts
         public int TotalPostPages { get; set; }
+
+        public bool IsCustomerGuest { get; set; }
     }
 }
